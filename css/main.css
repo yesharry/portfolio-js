@@ -1,0 +1,158 @@
+@charset 'utf-8';
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  overflow-x: hidden;
+  color: white;
+  letter-spacing: -0.05em;
+  background: #100f10;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* nav part */
+
+.global-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  padding: 0 1rem;
+}
+
+.local-nav {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  padding: 0 1rem;
+  border-bottom: 1px solid #242424;
+}
+
+.global-nav-links,
+.local-nav-links {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.global-nav-links {
+  justify-content: space-between;
+}
+
+.local-nav-links .product-name {
+  margin-right: auto;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.local-nav-links a {
+  font-size: 0.8rem;
+}
+
+.local-nav-links a:not(.product-name) {
+  margin-left: 2em;
+}
+
+/* section part */
+
+/* section 0 */
+
+.scroll-section {
+  border: 3px solid tomato;
+  padding-top: 50vh;
+}
+
+#scroll-section-0 h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.main-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 35vh;
+  margin: 5px 0;
+  height: 3em;
+  font-size: 2.5rem;
+}
+
+.main-message p {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* section 1 */
+
+.description {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+/* section 2 */
+
+.desc-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* footer part */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  color: orange;
+}
+
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+  display: block;
+}
+
+/* 반응형 */
+@media (min-width: 1024px) {
+  #scroll-section-0 h1 {
+    font-size: 6vw;
+  }
+
+  .main-message {
+    font-size: 3.7vw;
+  }
+
+  .description {
+    font-size: 2rem;
+  }
+
+  .description strong {
+    font-size: 6rem;
+  }
+
+  .desc-message {
+    font-size: 2vw;
+  }
+}
