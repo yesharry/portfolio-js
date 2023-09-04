@@ -131,6 +131,29 @@ a {
   font-weight: bold;
 }
 
+/* section 3 hr */
+
+.mid-message {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.canvas-caption {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.canvas-caption strong {
+  font-size: 1.2rem;
+}
+
 /* footer part */
 
 .footer {
@@ -168,5 +191,17 @@ a {
 
   .desc-message {
     font-size: 2vw;
+  }
+
+  .mid-message {
+    font-size: 4vw;
+  }
+
+  .canvas-caption {
+    font-size: 2vw;
+  }
+
+  .canvas-caption strong {
+    font-size: 2.5vw;
   }
 }
