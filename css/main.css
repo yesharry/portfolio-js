@@ -10,6 +10,15 @@ body {
   color: white;
   letter-spacing: -0.05em;
   background: #100f10;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #cccccc84;
+  }
 }
 
 p {

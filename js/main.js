@@ -394,12 +394,9 @@
           )}%, 0)`;
         }
 
-        // console.log("scene 2 -", scrollRatio);
-
         break;
 
       case 3:
-        // console.log("scene 3 -", scrollRatio);
         if (scrollRatio > 0.12) {
           // in
           objs.pjMessageB.style.opacity = calcValues(
