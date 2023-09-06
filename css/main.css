@@ -30,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+.yellow {
+  color: #ffd930;
+}
+
 /* nav part */
 
 .local-nav {
