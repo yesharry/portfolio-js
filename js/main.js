@@ -98,12 +98,6 @@
       },
       values: {},
     },
-    {
-      type: "normal",
-      heightNum: 4,
-      scrollHeight: 0,
-      objs: {},
-    },
   ];
 
   function setCanvasImages() {
