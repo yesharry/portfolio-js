@@ -55,31 +55,54 @@
     {
       // section 2
       type: "sticky",
-      heightNum: 5,
+      heightNum: 2,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-2"),
-        canvasCaption: document.querySelector(".canvas-caption"),
+        canvasCaption: document.querySelector(".project-caption"),
         canvas: document.querySelector(".image-blend-canvas"),
         context: document.querySelector(".image-blend-canvas").getContext("2d"),
         imagesPath: ["./images/pfy.jpg"],
         images: [],
+
+        pjMessageA: document.querySelector("#scroll-section-2 .project-box.a"),
+        pjMessageB: document.querySelector("#scroll-section-2 .project-box.b"),
+        pjMessageC: document.querySelector("#scroll-section-2 .project-box.c"),
+        pjMessageD: document.querySelector("#scroll-section-2 .project-box.d"),
       },
       values: {
         rect1X: [0, 0, { start: 0, end: 0 }],
         rect2X: [0, 0, { start: 0, end: 0 }],
         rectStartY: 0,
+
+        // opacity in
+        pjMessageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        pjMessageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
+        pjMessageC_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
+        pjMessageD_opacity_in: [0, 1, { start: 0.7, end: 0.8 }],
+
+        // translate in
+        pjMessageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        pjMessageB_translateY_in: [20, 0, { start: 0.3, end: 0.4 }],
+        pjMessageC_translateY_in: [20, 0, { start: 0.5, end: 0.6 }],
+        pjMessageD_translateY_in: [20, 0, { start: 0.7, end: 0.8 }],
       },
     },
     {
       // section 3
       type: "sticky",
-      heightNum: 5,
+      heightNum: 3.5,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-3"),
       },
       values: {},
+    },
+    {
+      type: "normal",
+      heightNum: 4,
+      scrollHeight: 0,
+      objs: {},
     },
   ];
 
@@ -393,8 +416,6 @@
     yOffset = window.scrollY;
     scrollLoop();
   });
-  window.addEventListener("load", () => {
-    setLayout();
-  });
+  window.addEventListener("load", setLayout);
   window.addEventListener("resize", setLayout);
 })();
