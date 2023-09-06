@@ -149,8 +149,8 @@ a {
 }
 
 /* section 3 */
-/* 
-#scroll-section-3 {
+
+/* #scroll-section-3 {
   background-color: #fff000;
 } */
 
@@ -164,6 +164,7 @@ a {
   font-size: 1.2rem;
   color: white;
   /* background-color: pink; */
+  opacity: 0;
 }
 
 .project-box img {
@@ -186,7 +187,7 @@ a {
 }
 
 /* section 4 */
-
+/* 
 #scroll-section-4 {
   margin-bottom: 50vh;
 }
@@ -194,7 +195,7 @@ a {
 #scroll-section-4 h1 {
   font-size: 5rem;
   text-align: center;
-}
+} */
 
 /* footer part */
 

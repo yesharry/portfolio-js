@@ -64,28 +64,11 @@
         context: document.querySelector(".image-blend-canvas").getContext("2d"),
         imagesPath: ["./images/pfy.jpg"],
         images: [],
-
-        pjMessageA: document.querySelector("#scroll-section-2 .project-box.a"),
-        pjMessageB: document.querySelector("#scroll-section-2 .project-box.b"),
-        pjMessageC: document.querySelector("#scroll-section-2 .project-box.c"),
-        pjMessageD: document.querySelector("#scroll-section-2 .project-box.d"),
       },
       values: {
         rect1X: [0, 0, { start: 0, end: 0 }],
         rect2X: [0, 0, { start: 0, end: 0 }],
         rectStartY: 0,
-
-        // opacity in
-        pjMessageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-        pjMessageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
-        pjMessageC_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
-        pjMessageD_opacity_in: [0, 1, { start: 0.7, end: 0.8 }],
-
-        // translate in
-        pjMessageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
-        pjMessageB_translateY_in: [20, 0, { start: 0.3, end: 0.4 }],
-        pjMessageC_translateY_in: [20, 0, { start: 0.5, end: 0.6 }],
-        pjMessageD_translateY_in: [20, 0, { start: 0.7, end: 0.8 }],
       },
     },
     {
@@ -95,8 +78,25 @@
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-3"),
+
+        pjMessageA: document.querySelector("#scroll-section-3 .project-box.a"),
+        pjMessageB: document.querySelector("#scroll-section-3 .project-box.b"),
+        pjMessageC: document.querySelector("#scroll-section-3 .project-box.c"),
+        pjMessageD: document.querySelector("#scroll-section-3 .project-box.d"),
       },
-      values: {},
+      values: {
+        // opacity in
+        pjMessageA_opacity_in: [0, 1, { start: 0.8, end: 0.9 }],
+        pjMessageB_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        pjMessageC_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
+        pjMessageD_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
+
+        // translate in
+        pjMessageA_translateY_in: [20, 0, { start: 0.8, end: 0.9 }],
+        pjMessageB_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        pjMessageC_translateY_in: [20, 0, { start: 0.3, end: 0.4 }],
+        pjMessageD_translateY_in: [20, 0, { start: 0.5, end: 0.6 }],
+      },
     },
   ];
 
@@ -370,9 +370,62 @@
           objs.canvas.height // height
         );
 
+        if (scrollRatio > 0.82) {
+          const objs = sceneInfo[3].objs;
+          const values = sceneInfo[3].values;
+
+          // in
+          objs.pjMessageA.style.opacity = calcValues(
+            values.pjMessageA_opacity_in,
+            currentYOffset
+          );
+          objs.pjMessageA.style.transform = `translate3d(0, ${calcValues(
+            values.pjMessageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        // console.log("scene 2 -", scrollRatio);
+
         break;
 
       case 3:
+        // console.log("scene 3 -", scrollRatio);
+        if (scrollRatio > 0.12) {
+          // in
+          objs.pjMessageB.style.opacity = calcValues(
+            values.pjMessageB_opacity_in,
+            currentYOffset
+          );
+          objs.pjMessageB.style.transform = `translate3d(0, ${calcValues(
+            values.pjMessageB_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio > 0.32) {
+          // in
+          objs.pjMessageC.style.opacity = calcValues(
+            values.pjMessageC_opacity_in,
+            currentYOffset
+          );
+          objs.pjMessageC.style.transform = `translate3d(0, ${calcValues(
+            values.pjMessageC_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio > 0.52) {
+          // in
+          objs.pjMessageD.style.opacity = calcValues(
+            values.pjMessageD_opacity_in,
+            currentYOffset
+          );
+          objs.pjMessageD.style.transform = `translate3d(0, ${calcValues(
+            values.pjMessageD_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        }
         break;
     }
   }
