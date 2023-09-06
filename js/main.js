@@ -98,6 +98,15 @@
         pjMessageD_translateY_in: [20, 0, { start: 0.5, end: 0.6 }],
       },
     },
+    {
+      // section 4
+      type: "normal",
+      heightNum: 5,
+      scrollHeight: 0,
+      objs: {
+        container: document.querySelector("#scroll-section-4"),
+      },
+    },
   ];
 
   function setCanvasImages() {
