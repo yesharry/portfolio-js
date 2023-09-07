@@ -4,6 +4,8 @@
   let currentScene = 0; // 현재 활성화된 scene의 번호
   let enterNewScene = false; // 새로운 scene이 시작되는 순간 true -> 즉, currentScene이 바뀌는 순간
 
+  const float = document.querySelector(".float-scroll");
+
   const sceneInfo = [
     {
       // section 0
@@ -431,6 +433,17 @@
             values.pjMessageD_translateY_in,
             currentYOffset
           )}%, 0)`;
+        }
+
+        break;
+
+      case 4:
+        if (scrollRatio > 0.1) {
+          float.style.opacity = `0`;
+          float.style.transition = `opacity 0.5s ease`;
+        } else {
+          float.style.opacity = `1`;
+          float.style.transition = `opacity 0.5s ease`;
         }
         break;
     }

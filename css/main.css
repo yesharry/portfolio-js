@@ -205,6 +205,25 @@ a {
   border-top: 1px solid #242424;
 }
 
+/* float scroll */
+
+.float-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 5%;
+  width: 70px;
+  height: 70px;
+  border: 3px dashed #ffd930;
+  border-radius: 50%;
+}
+
+.finger {
+  font-size: 30px;
+}
+
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
