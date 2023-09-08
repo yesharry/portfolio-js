@@ -88,16 +88,16 @@
       },
       values: {
         // opacity in
-        pjMessageA_opacity_in: [0, 1, { start: 0.8, end: 0.9 }],
-        pjMessageB_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-        pjMessageC_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
-        pjMessageD_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
+        pjMessageA_opacity_in: [0, 1, { start: 0.82, end: 0.98 }],
+        pjMessageB_opacity_in: [0, 1, { start: 0.12, end: 0.28 }],
+        pjMessageC_opacity_in: [0, 1, { start: 0.32, end: 0.48 }],
+        pjMessageD_opacity_in: [0, 1, { start: 0.52, end: 0.68 }],
 
         // translate in
-        pjMessageA_translateY_in: [20, 0, { start: 0.8, end: 0.9 }],
-        pjMessageB_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
-        pjMessageC_translateY_in: [20, 0, { start: 0.3, end: 0.4 }],
-        pjMessageD_translateY_in: [20, 0, { start: 0.5, end: 0.6 }],
+        pjMessageA_translateY_in: [20, 0, { start: 0.82, end: 0.98 }],
+        pjMessageB_translateY_in: [20, 0, { start: 0.12, end: 0.28 }],
+        pjMessageC_translateY_in: [20, 0, { start: 0.32, end: 0.48 }],
+        pjMessageD_translateY_in: [20, 0, { start: 0.52, end: 0.68 }],
       },
     },
     {
@@ -381,7 +381,7 @@
           objs.canvas.height // height
         );
 
-        if (scrollRatio > 0.82) {
+        if (scrollRatio > 0.8) {
           const objs = sceneInfo[3].objs;
           const values = sceneInfo[3].values;
 
@@ -399,7 +399,7 @@
         break;
 
       case 3:
-        if (scrollRatio > 0.12) {
+        if (scrollRatio > 0.1) {
           // in
           objs.pjMessageB.style.opacity = calcValues(
             values.pjMessageB_opacity_in,
@@ -411,7 +411,7 @@
           )}%, 0)`;
         }
 
-        if (scrollRatio > 0.32) {
+        if (scrollRatio > 0.3) {
           // in
           objs.pjMessageC.style.opacity = calcValues(
             values.pjMessageC_opacity_in,
@@ -423,7 +423,7 @@
           )}%, 0)`;
         }
 
-        if (scrollRatio > 0.52) {
+        if (scrollRatio > 0.5) {
           // in
           objs.pjMessageD.style.opacity = calcValues(
             values.pjMessageD_opacity_in,
