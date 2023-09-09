@@ -3,6 +3,7 @@
 html {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 body {
